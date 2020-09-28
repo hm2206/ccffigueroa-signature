@@ -1,13 +1,14 @@
 {
   "name": "ccffigueroa-signature",
-  "version": "1.0.2",
-  "description": "",
+  "version": "1.0.3",
+  "description": "Firma digital",
   "main": "index.js",
   "scripts": {
     "test": "node ./src/test.js"
   },
   "keywords": [],
-  "author": "",
+  "homepage": "https://ccffigueroa-pucallpa.vercel.app/",
+  "author": "Hans Medina",
   "license": "ISC",
   "dependencies": {
     "soap": "^0.33.0"
