@@ -11,7 +11,17 @@ const soap = require('soap');
    * @param {String} Info.Reason Razón del firmante
    */
 module.exports = (uri, Dni, ClavePfx, FileName, ArchivoBase, 
-    Info = { Reason: "Yo soy el firmante", Location: 'PE', AddVisibleSign: true, PageSignature: 1, PathImg: "https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" }
+    Info = { 
+      Reason: "Yo soy el firmante", 
+      Location: 'PE', 
+      AddVisibleSign: true, 
+      PageSignature: 1, 
+      PathImg: "https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png",
+      PositionX: 10,
+      PositionY: 10,
+      Width: 200,
+      Height: 100 
+    }
   ) => {
   return new Promise((resolve, reject) => {
     // preparamos los args para enviar a la api wcf
