@@ -9,6 +9,14 @@ const soap = require('soap');
    * @param {String} ArchivoBase Archivo PDF en base64
    * @param {Object} Info Meta información para el placeholder el la firma digital
    * @param {String} Info.Reason Razón del firmante
+   * @param {String} Info.Location Locacion del firmante
+   * @param {Boolean} Info.AddVisibleSign Firma visible
+   * @param {Number} Info.PageSignature Numero de página a firmar
+   * @param {String} Info.PathImg Ruta de la imagen para el placeholder
+   * @param {Number} Info.PositionX posision x para la firma
+   * @param {Number} Info.PositionY posision y para la firma
+   * @param {Number} Info.Width ancho del rectangulo
+   * @param {Number} Info.Height alto del rectangulo
    */
 module.exports = (uri, Dni, ClavePfx, FileName, ArchivoBase, 
     Info = { 
