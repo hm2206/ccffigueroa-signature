@@ -4,7 +4,7 @@
 
 const fs = require('fs');
 const path = require('path');
-const {  } = require('ccffigueroa-signature');
+const { SignHashed } = require('ccffigueroa-signature');
 
 let pdf = fs.readFileSync(path.join(__dirname, 'example.pdf'), 'base64');
 let url = 'http://192.168.100.7:8143/WsFirmaDigital.svc?singleWsdl';
