@@ -25,10 +25,7 @@ module.exports = (uri, Dni, ClavePfx, FileName, ArchivoBase,
       AddVisibleSign: true, 
       PageSignature: 1, 
       PathImg: "https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png",
-      PositionX: 10,
-      PositionY: 10,
-      Width: 200,
-      Height: 100 
+      Pos: 0
     }
   ) => {
   return new Promise((resolve, reject) => {
