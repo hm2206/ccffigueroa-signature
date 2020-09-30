@@ -1,4 +1,5 @@
 const soap = require('soap');
+const SignException = require('./SignException');
 
   /**
    * Firmador de PDF
@@ -50,9 +51,15 @@ module.exports = (uri, Dni, ClavePfx, FileName, ArchivoBase,
         err: null,
         link: fileName
       })
-    }).catch(err => reject({
-      err,
-      link: null
-    }));
+    }).catch(err => {
+      try {
+        throw new SignException(err);
+      } catch (error) {
+        reject({
+          err: error,
+          link: null
+        })
+      }
+    });
   }); 
 }
