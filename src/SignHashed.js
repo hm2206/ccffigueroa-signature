@@ -46,10 +46,12 @@ module.exports = (uri, Dni, ClavePfx, FileName, ArchivoBase,
       let [{SignHashedResult}] = result;
       let [link, direction] = `${SignHashedResult}`.split(';');
       let parsePath = `${direction}`.split('\\\\').pop();
-      let fileName = `${link}/${parsePath}`.replace('\\', '/');
+      let fileName = `${link}/${parsePath}`.replace(/(\\)/g, '/');
+      let name = `${fileName}`.split('/').pop();
       return resolve({ 
         err: null,
-        link: fileName
+        link: fileName,
+        name
       })
     }).catch(err => {
       try {
