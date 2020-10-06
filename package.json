@@ -1,6 +1,6 @@
 {
   "name": "ccffigueroa-signature",
-  "version": "1.0.9",
+  "version": "1.1.0",
   "description": "Firma digital",
   "main": "./src/index.js",
   "scripts": {

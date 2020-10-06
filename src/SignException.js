@@ -14,6 +14,7 @@ class SignException extends Error {
         if (this.code) return message;
         // config message
         this.code = 'ERR_SIGN_PDF';
+        return message;
         return message.split(":")[2] || message;
     }
 
